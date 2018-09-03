@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+  <com.kevinsuo.kstabpager.TabPager
+      android:id="@+id/tab_pager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:indicator_color="@color/white"
+      app:indicator_display="true"
+      app:indicator_width="10dp"
+      app:title_bar_background="@color/tab_pager_header_background"
+      app:title_text_color="@color/white"
+      app:title_text_size="16sp"
+      />
+
+</RelativeLayout>

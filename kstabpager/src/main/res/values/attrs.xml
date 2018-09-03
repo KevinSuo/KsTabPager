@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ****************************************************
+  ~ Copyright (c) 2018. Kevin.Suo. All Rights Reserved.
+  ~ Email: jinghao530@gmail.com
+  ~ ****************************************************
+  -->
+
+<resources>
+  <declare-styleable name="TabPager">
+    <attr format="dimension" name="indicator_width"/>
+    <attr format="dimension" name="indicator_height"/>
+    <attr format="color" name="indicator_color"/>
+    <attr format="boolean" name="indicator_display"/>
+
+    <attr format="color" name="title_bar_background"/>
+    <attr format="dimension" name="title_text_size"/>
+    <attr format="color" name="title_text_color"/>
+
+  </declare-styleable>
+</resources>
