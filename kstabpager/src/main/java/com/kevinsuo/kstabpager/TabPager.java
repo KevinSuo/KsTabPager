@@ -98,6 +98,16 @@ public class TabPager extends FrameLayout
     }
   }
 
+  /**
+   * 如果在嵌套在Fragment中使用此控件 初始化子项之前调用本方法切换 FragmentManager
+   * @param fragment
+   */
+  public void useChildFragmentManager(Fragment fragment) {
+    FragmentManager fm = fragment.getChildFragmentManager();
+    adapter = new TabPagerAdapter(fm, fragment.getContext());
+    itemViewPagers.setAdapter(adapter);
+  }
+
   @Override public void onCheckedChanged(RadioGroup group, int checkedId) {
     Log.d("TabPager", "onCheckedChanged " + checkedId);
     //View child = group.getChildAt(checkedId - 1);

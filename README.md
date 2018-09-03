@@ -41,6 +41,9 @@ allprojects {
 
 ```java
  TabPager tabPager = findViewById(R.id.tab_pager);
+
+ tabPager.useChildFragmentManager(fragment); // 如果控件在fragment中使用 调用此方法切换FragmentManager
+
  tabPager.setItems(new TabPager.TabPagerItemBuilder()
               .addItem(TabPager.TabPagerItem.build("聊天", TabFragment.class))
               .addItem(TabPager.TabPagerItem.build("联系人", TabFragment.class))
