@@ -2,6 +2,29 @@
 > 项目中用到，其他开源的感觉太重了，就自己写了个，封装了ViewPager
 
 ## 用法
+
+1. 第一步 添加 JitPack 到 build 文件
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+```
+
+2. 第二步 添加依赖 [![](https://jitpack.io/v/KevinSuo/KsTabPager.svg)](https://jitpack.io/#KevinSuo/KsTabPager)
+
+```groovy
+	dependencies {
+	        implementation 'com.github.KevinSuo:KsTabPager:v0.0.1'
+	}
+```
+            
+3. 在代码中使用
+
 ```xml
 <com.kevinsuo.kstabpager.TabPager
       android:id="@+id/tab_pager"
