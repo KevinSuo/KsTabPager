@@ -16,6 +16,7 @@
       app:indicator_color="@color/white"
       app:indicator_display="true"
       app:indicator_width="10dp"
+      app:indicator_height="4dp"
       app:title_bar_background="@color/tab_pager_header_background"
       app:title_text_color="@color/white"
       app:title_text_size="16sp"

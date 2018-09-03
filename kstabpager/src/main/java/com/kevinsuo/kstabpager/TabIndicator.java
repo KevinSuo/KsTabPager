@@ -18,6 +18,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 /**
  * Create by Kevin Suo on 2018/8/31
@@ -64,7 +66,7 @@ public class TabIndicator extends View {
 
   public void setIndicatorHeight(int indicatorHeight) {
     if (indicatorHeight > 0) {
-      this.indicatorHeight = indicatorHeight;
+      getLayoutParams().height = indicatorHeight;
     }
   }
 
