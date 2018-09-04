@@ -10,6 +10,7 @@ package com.kevinsuo.kstabpager;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -196,10 +197,12 @@ public class TabPager extends FrameLayout
   public static class TabPagerItem {
     private String title;
     private Class pageClass;
+    private Bundle args;
 
-    private TabPagerItem(String title, Class<Fragment> pageClass) {
+    private TabPagerItem(String title, Class<Fragment> pageClass, Bundle args) {
       this.title = title;
       this.pageClass = pageClass;
+      this.args = args;
     }
 
     public String getTitle() {
@@ -210,8 +213,16 @@ public class TabPager extends FrameLayout
       return pageClass;
     }
 
-    public static TabPagerItem build(String title, Class pageClass) {
-      return new TabPagerItem(title, pageClass);
+    public Bundle getArgs() {
+      return args;
+    }
+
+    public static TabPagerItem build(String title, Class<Fragment> pageClass) {
+      return new TabPagerItem(title, pageClass, null);
+    }
+
+    public static TabPagerItem build(String title, Class<Fragment> pageClass, Bundle args) {
+      return new TabPagerItem(title, pageClass, args);
     }
   }
 
@@ -236,7 +247,7 @@ public class TabPager extends FrameLayout
     @Override public Fragment getItem(int i) {
       if (i < items.size()) {
         String pName = items.get(i).getPageClass().getName();
-        return Fragment.instantiate(mContext, pName);
+        return Fragment.instantiate(mContext, pName, items.get(i).args);
       }
       return Fragment.instantiate(mContext, Fragment.class.getName());
     }
