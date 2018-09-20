@@ -3,27 +3,20 @@
 
 ## 用法
 
-1. 第一步 添加 JitPack 到 build 文件
 
-```
-allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
 
-```
-
-2. 第二步 添加依赖 [![](https://jitpack.io/v/KevinSuo/KsTabPager.svg)](https://jitpack.io/#KevinSuo/KsTabPager)
+### 添加依赖
+[ ![Download](https://api.bintray.com/packages/kevinsuo/maven/kstabpager/images/download.svg) ](https://bintray.com/kevinsuo/maven/kstabpager/_latestVersion) 
 
 ```groovy
 	dependencies {
-	        implementation 'com.github.KevinSuo:KsTabPager:v0.0.1'
+	
+	   implementation 'com.kevinsuo:kstabpager:0.0.2'
+	        
 	}
 ```
-            
-3. 在代码中使用
+           
+### 在代码中使用
 
 ```xml
 <com.kevinsuo.kstabpager.TabPager

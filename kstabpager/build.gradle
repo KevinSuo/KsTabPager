@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 ext {
   bintrayRepo = 'maven' // 远程仓库名
-  bintrayName = 'com.kevinsuo.ksabpager' // 包名 全部小写 可包含数字 - _ .
+  bintrayName = 'kstabpager' // 包名 全部小写 可包含数字 - _ .
 
   publishedGroupId = 'com.kevinsuo' // 组名
   libraryName = 'KsTabPager'
@@ -13,7 +13,7 @@ ext {
   siteUrl = 'https://github.com/KevinSuo/KsTabPager'
   gitUrl = 'https://github.com/KevinSuo/KsTabPager.git'
 
-  libraryVersion = '0.0.1'
+  libraryVersion = '0.0.2'
 
   developerId = 'kevin'
   developerName = 'Kevin Suo'
