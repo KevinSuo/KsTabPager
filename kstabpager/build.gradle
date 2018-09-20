@@ -1,5 +1,28 @@
 apply plugin: 'com.android.library'
-apply from: 'maven_push.gradle'
+
+ext {
+  bintrayRepo = 'maven' // 远程仓库名
+  bintrayName = 'com.kevinsuo.ksabpager' // 包名
+
+  publishedGroupId = 'com.kevinsuo' // 组名
+  libraryName = 'KsTabPager'
+  artifact = 'kstabpager' //当前组件名
+
+  libraryDescription = 'A TabPager Library for Android'
+
+  siteUrl = 'https://github.com/KevinSuo/KsTabPager'
+  gitUrl = 'https://github.com:KevinSuo/KsTabPager.git'
+
+  libraryVersion = '0.0.1'
+
+  developerId = 'kevin'
+  developerName = 'Kevin Suo'
+  developerEmail = 'jinghao530@gmail.com'
+
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
 
 android {
   compileSdkVersion 27
@@ -22,4 +45,9 @@ android {
 dependencies {
   implementation fileTree(include: ['*.jar'], dir: 'libs')
   implementation 'com.android.support:support-v4:27.1.1'
+}
+
+if(rootProject.file('local.properties').exists()) {
+  apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+  apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
 }
