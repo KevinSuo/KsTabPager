@@ -1,0 +1,32 @@
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+configurations {
+  deployerJars
+}
+
+repositories {
+  mavenCentral()
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      beforeDeployment {
+        MavenDeployment deployment -> signing.signPom(deployment)
+      }
+
+      pom.version = VERSION
+      pom.artifactId = ARTIFACT_ID
+      pom.groupId = GROUP_ID
+
+      repository(url: RELEASE_URL) {
+        authentication(userName: NAME, password: PASSWORD) // maven授权信息
+      }
+    }
+  }
+}
+
+signing {
+  sign configurations.archives
+}
